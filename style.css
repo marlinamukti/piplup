@@ -1,0 +1,268 @@
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin:0;
+    background-color: beige;
+}
+div{
+    position: absolute;
+}
+.container{
+    border: 1px solid black;
+    /* position: relative; */
+    /* display: block; */
+    width: 400px;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.head{
+    background-color: #4096ee;
+    width: 300px;
+    height: 270px;
+    border-radius: 50%;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-right: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.eyeMask{
+    background-color: white;
+    width: 170px;
+    height: 170px;
+    top:90px;
+    left: 108px;
+    border-radius: 49% 51% 52% 48% / 39% 83% 17% 61%;
+    transform: rotate(-40deg);
+}
+
+.groupEye{
+    background-color: #09437e;
+    border: 1px solid black;
+    width: 45px;
+    height: 75px;
+    transform: rotate(20deg);
+    left: 80px;
+    top: 60px;
+    border-radius: 53% 47% 49% 51% / 51% 52% 48% 49%;
+    animation-name: eye-animation;
+    animation-duration: 10s;
+}
+
+.pupil{
+    background-color: white;
+    width: 18px;
+    height: 30px;
+    border-radius: 53% 47% 49% 51% / 51% 52% 48% 49%;
+    left: 10px;
+    top: 10px;
+    box-shadow: -2px -2px 2px white,
+        5px 18px 0 0 black,
+        -1px 18px 0 0 black,
+        2px 20px 5px 5px black;
+    animation-name: pupil-animation;
+    animation-duration: 10s;
+}
+
+.mouth{
+    width: 42px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: rgb(221, 181, 5);
+    top: 150px;
+    left: 270px;
+    border-radius: 53% 47% 52% 48% / 72% 72% 28% 28%;
+    z-index: 1;
+}
+
+.mouthBottom{
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    background-color:  rgb(221, 181, 5);
+    top: 170px;
+    left: 270px;
+    border-radius: 53% 47% 79% 21% / 22% 7% 93% 78%;
+}
+
+
+.body{
+    /* border: 1px solid black; */
+    background-color: #94bbe2;
+    width: 260px;
+    height: 270px;
+    top: 245px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    border-radius: 54% 46% 57% 43% / 78% 46% 54% 22%  ;
+    transform: translateX(-30px) rotate(20deg);
+}
+
+.body::after{
+    background-color: #94bbe2;
+    width: 100px;
+    height: 200px;
+    display: block;
+    content: "";
+    z-index: 3;
+    margin-left:160px;
+    margin-top: 20px;
+    border-radius: 54% 46% 57% 43% / 78% 46% 54% 22%;
+    border-right: inset black;
+}
+
+.hand{
+    width: 80px;
+    height: 130px;
+    background-color: #94bbe2;
+    top: 90px;
+    left: 90px;
+    border-radius: 54% 46% 69% 31% / 38% 23% 77% 62% ;
+    border-right: 1px solid black;
+    border-bottom: 2px solid black;
+}
+
+.hand::after{
+    width: 80px;
+    height: 130px;
+    background-color: #94bbe2;
+    top: 90px;
+    left: 90px;
+    border-radius: 54% 46% 69% 31% / 38% 23% 77% 62% ;
+    border-right: 1px solid black;
+    border-bottom: 2px solid black;
+    content: "";
+    margin-left: 40px;
+    margin-top: -170px;
+    display: block;
+    transform: rotate(-50deg);
+    position: absolute;
+    z-index: -99;
+}
+
+.circle{
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    top:100px;
+    left:150px;
+    border-radius: 50%;
+    transform: skew(10deg);
+}
+
+.tieLeft{
+    width: 140px;
+    height: 100px;
+    background-color: #4096ee;
+    top: 230px;
+    left: 190px;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    z-index: -1;
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50% ;
+    transform: rotate(33deg) skew(-23deg, -4deg);
+}
+
+
+.tieRight{
+    width: 170px;
+    height: 180px;
+    background-color: #4096ee;
+    top: 200px;
+    left: 90px;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    z-index: -1;
+    border-radius: 50% 50% 50% 50% / 0% 0% 100% 100%  ;
+    transform: rotate(-20deg) skew(10deg);
+}
+
+.tail{
+    /* border: 1px solid black; */
+    top: 210px;
+    left: -20px;
+    z-index: -1;
+    transform: scale(1.2);
+}
+
+.tailsmall{
+    width: 60px;
+    height: 30px;
+    background-color: #4096ee;
+    border-radius:39% 61% 47% 53% / 20% 100% 0% 80%  ;
+    top:60px;
+    z-index: -1;
+    transform: rotate(40deg);
+}
+
+.tailbig{
+    width: 90px;
+    height: 60px;
+    background-color: #4096ee;
+    border-radius:39% 61% 47% 53% / 20% 100% 0% 80%  ;
+    top:75px;
+    left: -30px;
+    z-index: -1;
+    transform: rotate(20deg) skew(30deg);
+}
+
+.footSkin{
+    width: 80px;
+    height: 40px;
+    background-color: #94bbe2;
+    top: 480px;
+    left: 80px;
+    transform: rotate(20deg);
+    border-radius: 54% 46% 49% 51% / 25% 20% 80% 75% ;
+}
+
+.footRight{
+    width: 120px;
+    height: 65px;
+    background-color: rgb(221, 181, 5);
+    top: 500px;
+    left: 80px;
+    border-radius: 23% 77% 28% 72% / 36% 51% 49% 64%  ;
+    z-index: -1;
+    transform: rotate(10deg);
+}
+
+.footLeft{
+    width: 100px;
+    height: 50px;
+    background-color: rgb(221, 181, 5);
+    top: 470px;
+    left: 180px;
+    border-radius: 23% 77% 28% 72% / 36% 51% 49% 64%  ;
+    z-index: -2;
+    transform: rotate(10deg);
+}
+
+@keyframes eye-animation{
+    0%{background-color:black;
+        border-radius: 51% 49% 49% 51% / 0% 0% 100% 100% ;
+    }
+    100%{background-color:#09437e;}
+}
+
+@keyframes pupil-animation{
+    0%{
+        box-shadow: -2px -2px 2px white,
+        5px 18px 0 0 white,
+        18px 18px 0 0 white,
+        2px 20px 5px 5px white;
+    }
+}
