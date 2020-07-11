@@ -11,7 +11,7 @@ div{
     position: absolute;
 }
 .container{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     /* position: relative; */
     /* display: block; */
     width: 400px;
@@ -154,13 +154,25 @@ div{
 }
 
 .circle{
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background-color: white;
     top:100px;
-    left:150px;
+    left:180px;
     border-radius: 50%;
-    transform: skew(10deg);
+    transform: skew(6deg);
+}
+
+.circle::after{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 50px;
+    background-color: white;
+    margin-left: 65px;
+    margin-top: -30px;
+    border-radius: 50%;
+    transform: skew(-4deg);
 }
 
 .tieLeft{
